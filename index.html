@@ -9,75 +9,163 @@
     <meta name="author" content="Shivani Charan"/>
 
     <title>Portfolio Website</title>
-    <link rel="stylesheet" href="styles.css">
+
+<!--    remix icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+          integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!--CSS-->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
+<!--header-->
+<header class="header" id="header">
+    <nav class="nav container">
+        <a href="#" class="nav__logo">Shivani</a>
+        <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="#home" class="nav__link active-link">
+                        <i class="ri-arrow-right-up-line"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
 
-<!-- Day 2: Header & Navigation -->
-<header>
-    <h1>My Portfolio</h1>
-    <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
+                <li class="nav__item">
+                    <a href="#about" class="nav__link active-link">
+                        <i class="ri-arrow-right-up-line"></i>
+                        <span>About</span>
+                    </a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="#projects" class="nav__link active-link">
+                        <i class="ri-arrow-right-up-line"></i>
+                        <span>Projects</span>
+                    </a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="#resume" class="nav__link active-link">
+                        <i class="ri-arrow-right-up-line"></i>
+                        <span>Resume</span>
+                    </a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="#contact" class="nav__link active-link">
+                        <i class="ri-arrow-right-up-line"></i>
+                        <span>Contact</span>
+                    </a>
+                </li>
+            </ul>
+
+            <!--        close btn-->
+            <div class="nav__close" id="nav-close">
+                <i class="ri-close-large-line"></i>
+            </div>
+
+
+            <!--            social icons-->
+            <div class="nav__social">
+                <a href="https://www.instagram.com/erehh_weeder/" target="_blank" class="nav__social-link">
+                    <i class="ri-instagram-line"></i>
+                </a>
+                <a href="https://github.com/ShivaniCharan4101997" target="_blank" class="nav__social-link">
+                    <i class="ri-github-fill"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/shivani-charan-86aba5204/" target="_blank" class="nav__social-link">
+                    <i class="ri-linkedin-box-fill"></i>
+                </a>
+            </div>
+        </div>
+
+
+        <!--        toggle menu-->
+        <div class="nav__toggle" id="toggle-menu">
+            <i class="ri-menu-line"></i>
+        </div>
     </nav>
 </header>
+<!--main-->
+<main class="main">
+<!--    section home-->
+    <section class="home section" id="home">
+        <div class="home__container container grid">
+      <div class="home__content">
+          <div class="home__image">
+              <img src="./assets/images/pfp.jpg" alt="my image" class="home__img">
+          </div>
+      </div>
+            <div class="home__data grid">
+                <p class="home__subtitle">
+                    Hi, I'm a <span id="home-typed">Frontend Developer</span>
+                </p>
+                <h1 class="home__title">Shivani Charan</h1>
+                <p class="home__description">
+                    Frontend Developer specializing in responsive design and modern UI development. I build fast, accessible, and scalable web interfaces while continuously exploring new tools and best practices in frontend development.
+                </p>
+                <div class="home__buttons">
+                    <a href="./assets/ShivaiCV.pdf"  download="" target="_blank" class="button">Download CV</a>
+                    <a href="#projects" class="button button__ghost">Projects</a>
+                </div>
+            </div>
+        </div>
+    </section>
+<!--    section about-->
+    <section class="about section" id="about">
+        <div class="about__container container grid">
+            <div class="about__content">
+                <div class="about__data">
+                    <h2 class="section__title">About me</h2>
+                    <p class="about__description">
+                        I’m a frontend developer who enjoys building visually appealing and responsive web interfaces. I focus on clean design, smooth interactions, and writing maintainable code using HTML, CSS, and JavaScript.
+                    </p>
+                    <a href="#contact" class="button button__ghost">Contact me</a>
+                </div>
+            <div class="about__skills">
+                <h3 class="about__subtitle">
+                    <i class="ri-bookmark-3-fill "></i>
+                    <span>Skills</span>
+                </h3>
+                <ul class="about__items">
+                    <li class="about__item">HTML</li>
+                    <li class="about__item">CSS</li>
+                    <li class="about__item">JavaScript</li>
+                    <li class="about__item">React</li>
+                    <li class="about__item">Redux</li>
+                    <li class="about__item">Node.js</li>
+                    <li class="about__item">Express</li>
+                    <li class="about__item">Git</li>
+                    <li class="about__item">GitHub</li>
+                    <li class="about__item">Next JS</li>
 
-<!-- Day 3: About Section -->
-<section id="about">
-    <h2>About Me</h2>
-    <img src="images/pfp.jpg" alt="Profile Picture"/>
+                </ul>
+            </div>
+            </div>
+            <div class="about__image">
+                <img src="/assets/images/pfp.jpg" alt="image" class="about__img">
+            </div>
+        </div>
+    </section>
+<!--    section projects-->
+    <section class="projects section" id="projects"></section>
+<!--    section resume-->
+    <section class="resume section" id="resume"></section>
+<!--    section contact-->
+    <section class="contact section" id="contact"></section>
 
-    <p>Hello! My name is Shivani Charan. I am currently working on my Week 1 internship project where I am building my portfolio using HTML.</p>
+</main>
+<!--footer-->
+<footer class="footer"></footer>
 
-    <p>I love teaching, designing, and helping students learn coding and English.</p>
-</section>
-
-<!-- Day 4: Skills Section -->
-<section id="skills">
-    <h2>My Skills</h2>
-
-    <h3>Technical Skills</h3>
-    <ul>
-        <li>HTML</li>
-        <li>CSS (Basic)</li>
-        <li>JavaScript (Basic)</li>
-        <li>React (Learning)</li>
-    </ul>
-
-    <h3>Soft Skills</h3>
-    <ul>
-        <li>Communication</li>
-        <li>Teaching</li>
-        <li>Problem Solving</li>
-    </ul>
-</section>
-
-<!-- Day 5: Contact Form -->
-<section id="contact">
-    <h2>Contact Me</h2>
-
-    <form>
-        <label>Name
-        <input type="text" name="name" placeholder="Enter your name" required minlength="3"/>
-        </label>
-        <label>Email
-        <input type="email" name="email" placeholder="Enter your email" required/>
-        </label>
-        <label>Message
-        <textarea name="message" placeholder="Enter your message" required minlength="10"></textarea>
-        </label>
-        <button type="submit">Send Message</button>
-    </form>
-</section>
-
-<!-- Day 6: Links -->
-<section>
-    <h2>Find Me Online</h2>
-    <p><a href="https://www.linkedin.com/in/shivani-charan-86aba5204/" target="_blank">LinkedIn Profile</a></p>
-    <p><a href="https://github.com/ShivaniCharan4101997" target="_blank">GitHub Profile</a></p>
-</section>
-
+<!--scroll up-->
+<!--scroll reveal-->
+<!--typed js-->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<!--email js-->
+<!--main js-->
+<script src="js/script.js"></script>
 </body>
 </html>

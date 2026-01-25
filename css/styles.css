@@ -35,6 +35,16 @@
     --z-fixed: 100;
 }
 
+/*=============== LIGHT THEME ===============*/
+body.light-theme {
+    --body-color: hsl(var(--hue), 20%, 95%);
+    --container-color: hsl(var(--hue), 20%, 90%);
+    --white-color: hsl(var(--hue), 10%, 15%);
+    --black-color: hsl(var(--hue), 10%, 10%);
+    --gray-color: hsl(var(--hue), 10%, 40%);
+}
+
+
 /*================ RESPONSIVE TYPOGRAPHY ================*/
 @media screen and (min-width: 1150px) {
     :root {
@@ -161,6 +171,18 @@ img {
     font-size: 1.5rem;
     cursor: pointer;
     display: none;
+}
+
+/*=============== THEME BUTTON ===============*/
+.nav__theme {
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.nav__theme:hover {
+    transform: rotate(20deg);
+    color: var(--first-color);
 }
 
 /*================ MOBILE MENU ================*/

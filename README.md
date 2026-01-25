@@ -1,204 +1,232 @@
-# Week 1 Internship Project – Personal Portfolio Website
+📌 Project Overview
+Project Title
 
-## 1. Project Overview
+Responsive Portfolio Website using Advanced CSS Techniques
 
-The **Week 1 Internship Project** focuses on building a basic personal portfolio website using **HTML**.
+Goal & Objectives
 
-The goal of this project is to understand foundational HTML concepts, create a clean and well-organized project structure, and practice arranging content into meaningful sections such as **Header, About, Skills, and Contact**.
+The goal of this project is to design and develop a modern, responsive portfolio website that demonstrates advanced 
+frontend skills using HTML, CSS, and JavaScript.
 
-### Project Objectives
+Objectives:
 
-* Understand and apply essential HTML elements
-* Build a structured and semantic portfolio web page
-* Practice using forms, links, navigation menus, lists, and images
-* Follow clean coding and documentation standards
-* Validate the HTML file for correctness using standard tools
+=> Build a clean, professional personal portfolio
 
----
+=> Implement CSS Grid and Flexbox for complex layouts
 
-## 2. HTML Concepts Learned
+=> Use CSS variables for theme management
 
-During Week 1, the following key HTML topics were learned and applied:
+=> Add smooth animations and transitions for better UX
 
-### ✔ Basic HTML Structure
+=> Follow BEM methodology for scalable CSS
 
-* `<!DOCTYPE html>`
-* `<html>`, `<head>`, `<body>`
-* Meta tags for responsiveness and SEO
-* Page title setup
+=> Ensure mobile-first, responsive design
 
-### ✔ Text & Content Tags
+=> Optimize performance and accessibility
 
-* `<h1>` – `<h6>` headings
-* `<p>` paragraphs
-* `<strong>` and `<em>` emphasis tags
 
-### ✔ Navigation & Linking
 
-* `<nav>` semantic tag
-* `<a>` anchor tags for internal and external links
-* `target="_blank"` for opening links in new tabs
+⚙️ Setup Instructions
+Prerequisites
 
-### ✔ Lists
+Web browser (Chrome, Firefox, Edge)
 
-* Ordered lists `<ol>`
-* Unordered lists `<ul>`
-* List items `<li>`
+Code editor (VS Code recommended)
 
-### ✔ Images
 
-* `<img src="" alt="">`
-* Importance of the `alt` attribute for accessibility
+Installation Steps
 
-### ✔ Forms & Input Validation
+Clone or download the project
 
-* `<form>`
-* `<input>` with `required`, `minlength`, and `type="email"`
-* `<textarea>` for multi-line input
-* `<button>` for form submission
+git clone <repository-url>
 
-### ✔ Semantic Structure
 
-Semantic tags were used to improve readability and accessibility:
+Open the project folder
 
-* `<header>`
-* `<section>`
-* `<nav>`
+Open index.html in a browser
+(No build tools required)
 
----
 
-## 3. How the Portfolio is Structured
 
-### 1. Header Section
+🗂️ Code Structure
 
-* Contains the portfolio title
-* Includes a navigation menu linking to different sections
+portfolio/
+│
+├── index.html
+├── css/
+│   └── styles.css
+├── js/
+│   └── script.js
+├── assets/
+│   ├── images/
+│   └── ShivaniCV.pdf
+└── README.md
 
-### 2. About Section
+Structure Rationale
 
-* Displays a profile image
-* Includes a short personal introduction
+Separation of concerns (HTML / CSS / JS)
 
-### 3. Skills Section
+Easy scalability and maintainability
 
-* Lists technical skills
-* Lists soft skills using HTML list tags
+Clear asset organization
 
-### 4. Contact Section
 
-* Includes a contact form
-* Validation for name, email, and message fields
+🎨 Advanced CSS Techniques Used
+1️⃣ CSS Grid for Layout Architecture
 
-### 5. Online Links Section
+CSS Grid is used for primary layouts, ensuring flexibility and responsiveness.
 
-* Links to GitHub and LinkedIn profiles
+.projects__container {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
 
----
 
-## 4. Setup Instructions
+2️⃣ Flexbox for Alignment & Navigation
 
-Follow these steps to run or edit the project locally:
+Flexbox is used for navigation, buttons, icons, and alignment.
 
-### Step 1: Install a Code Editor
+.nav {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
 
-* Download and install **VS Code** or **WebStorm** for your operating system
 
-### Step 2: Create Project Folder
+3️⃣ CSS Variables (Custom Properties)
 
-* Create a folder named `week1-portfolio`
+Centralized theming using :root variables.
+:root {
+--first-color: hsl(180, 80%, 48%);
+--body-color: hsl(180, 8%, 8%);
+}
 
-### Step 3: Create HTML File
+4️⃣ Theme Switching via CSS Variables
 
-* Inside the folder, create a file named `index.html`
+Theme switching is implemented by toggling a class on <body>.
 
-### Step 4: Write Code and Add Images
+body.light-theme {
+--body-color: hsl(180, 20%, 95%);
+}
 
-* Add your HTML code
-* Place images inside the `images` folder
+5️⃣ Animations & Transitions
 
-### Step 5: Open in Browser
+Smooth UI interactions using transition and transform.
 
-* Right-click `index.html`
-* Open with Chrome / Edge / Firefox
+.projects__card:hover .projects__data {
+opacity: 1;
+transform: translateY(0);
+}
 
----
+6️⃣ Advanced CSS Selectors
 
-## 5. Code Structure
+Used for precision styling and clean markup.
 
-The project follows a simple and clean file hierarchy:
+Examples:
 
-```
-week1-portfolio/
-│── index.html
-│── images/
-│   └── pfp.jpg
-│── README.md
-```
+Pseudo-elements: ::after
 
----
+Pseudo-classes: :hover, :focus
 
-## 6. Visual Documentation (Screenshots)
+Descendant selectors
 
-Include the following screenshots in your submission:
+Attribute & state-based styling
 
-* Browser view of the portfolio homepage
-* Screenshots stored in:
+.nav__link span::after { ... }
+.contact__input:focus::placeholder { ... }
 
-    * `images/ss/ss1`
-    * `images/ss/ss2`
 
----
+7️⃣ BEM Methodology
 
-## 7. Technical Details
+Strict Block–Element–Modifier naming ensures scalable CSS.
 
-Although this project uses **HTML only**, several technical principles were applied:
+Example:
+.projects__card
+.projects__title
+.button__ghost
+.active-link
 
-### ✔ Architecture
 
-* Single-page website structure
-* Semantic HTML layout for accessibility
-* Clear separation of concerns (HTML for structure)
+📱 Responsive Design (Mobile-First)
+Approach:
 
-### ✔ No Algorithms or Data Structures
+Base styles target mobile devices
 
-* This is a static HTML project
-* No logic-based algorithms were required
+Enhancements via min-width media queries
+@media screen and (min-width: 768px) {
+.home__container {
+grid-template-columns: repeat(2, 350px);
+}
+}
+✔ Mobile-first
+✔ Tablet optimized
+✔ Desktop enhanced
+✔ 2K resolution support
 
-### ✔ Input Validation Rules
 
-| Field   | Rule                         | Purpose                      |
-| ------- | ---------------------------- | ---------------------------- |
-| Name    | `required`, `minlength="3"`  | Prevent empty or short names |
-| Email   | `type="email"`               | Validate email format        |
-| Message | `required`, `minlength="10"` | Ensure meaningful messages   |
+⚡ Performance Optimizations
+1️⃣ CSS-Only Animations
 
----
+Used transform and opacity
 
-## 8. Testing Evidence
+Avoided layout-thrashing properties (top, left)
 
-The following tests were performed:
+2️⃣ Reusable Utility Classes
+.grid {
+display: grid;
+gap: 1.5rem;
+}
+Reduced duplicated CSS
 
-### ✔ Browser Testing
+Smaller stylesheet size
 
-* Opened the website in Chrome
-* Verified all sections display correctly
-* Confirmed images and links load properly
+3️⃣ Optimized Images
 
-### ✔ Form Validation Testing
+Responsive images
 
-| Test Case             | Expected Result     | Status |
-| --------------------- | ------------------- | ------ |
-| Blank form submission | Error message shown | Passed |
-| Invalid email format  | Error message shown | Passed |
-| Short message         | Error message shown | Passed |
-| All valid inputs      | Form accepted       | Passed |
+object-fit: cover
 
-### ✔ HTML Validation
+No unnecessary large assets
 
-* Used the **W3C HTML Validator** to check:
+4️⃣ Minimal JavaScript
 
-    * Errors
-    * Warnings
-    * Missing attributes
+No heavy libraries
 
-The HTML file passed validation successfully and is clean and error-free.
+DOM updates kept minimal
+
+Theme state stored in localStorage
+
+
+🧠 Technical Details (Architecture)
+Architecture Type
+
+Component-based static architecture
+
+Each section acts as a self-contained component
+
+CSS handles layout & interaction
+
+JS handles behavior only
+
+Data Structures & Logic
+
+DOM manipulation
+
+Event listeners
+
+LocalStorage key-value storage
+
+No unnecessary loops or recursion
+
+
+🧪 Testing Evidence
+Manual Test Cases
+
+| Test Case               | Expected Result            | Status |
+| ----------------------- | -------------------------- | ------ |
+| Mobile menu toggle      | Menu opens/closes smoothly | ✅      |
+| Theme switch            | UI colors change correctly | ✅      |
+| Page reload             | Theme preference retained  | ✅      |
+| Responsive layout       | No overflow/breaking       | ✅      |
+| Hover effects           | Smooth animations          | ✅      |
+| Contact form validation | Required fields enforced   | ✅      |

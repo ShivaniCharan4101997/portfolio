@@ -3,6 +3,43 @@ const navMenu  = document.querySelector("#nav-menu");
 const navToggle = document.querySelector("#toggle-menu");
 const navClose  = document.querySelector("#nav-close");
 
+
+const themeButton = document.getElementById("theme-button");
+const lightTheme = "light-theme";
+const iconTheme = "ri-sun-line";
+
+const selectedTheme = localStorage.getItem("selected-theme");
+const selectedIcon = localStorage.getItem("selected-icon");
+
+
+/*=============== THEME SWITCHER ===============*/
+
+// Apply saved theme
+if (selectedTheme) {
+    document.body.classList[selectedTheme === "light" ? "add" : "remove"](lightTheme);
+    themeButton.firstElementChild.classList[selectedIcon === "ri-sun-line" ? "add" : "remove"](iconTheme);
+}
+
+
+// Toggle theme
+themeButton.addEventListener("click", () => {
+    document.body.classList.toggle(lightTheme);
+    themeButton.firstElementChild.classList.toggle(iconTheme);
+
+    localStorage.setItem(
+        "selected-theme",
+        document.body.classList.contains(lightTheme) ? "light" : "dark"
+    );
+    localStorage.setItem(
+        "selected-icon",
+        themeButton.firstElementChild.classList.contains(iconTheme)
+            ? "ri-sun-line"
+            : "ri-moon-line"
+    );
+});
+
+
+
 /* Open menu */
 if (navMenu && navToggle) {
     navToggle.addEventListener("click", () => {
